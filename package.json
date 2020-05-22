@@ -3,7 +3,7 @@
   "homepage": ".",
   "version": "0.1.0",
   "private": true,
-    "description": "dashboard with tools to optimize productivity",
+  "description": "dashboard with tools to optimize productivity",
   "main": "server/index.js",
   "repository": {
     "type": "git",
@@ -18,10 +18,11 @@
   "bugs": {
     "url": "https://github.com/julian-hecker/prodash/issues"
   },
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "node server",
-    "dev": "concurrently \"npm:react-start\" \"nodemon server\"",
-    "react-start": "react-scripts start",
+    "dev": "concurrently \"nodemon server\" \"npm run start-react\"",
+    "start-react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -30,12 +31,13 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-    "devDependencies": {
+  "devDependencies": {
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"
   },
