@@ -3,9 +3,9 @@ import logo from "../../assets/logo.svg";
 import "./App.css";
 
 const getData = () => {
-  fetch("/ping")
+  fetch("/api/prime/169")
     .then((res) => res.json())
-    .then((res) => console.log(res))
+    .then((res) => alert(res))
     .catch((err) => {
       console.log(err);
     });
