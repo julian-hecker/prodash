@@ -1,20 +1,43 @@
 {
   "name": "prodash",
+  "homepage": ".",
   "version": "0.1.0",
   "private": true,
+    "description": "dashboard with tools to optimize productivity",
+  "main": "server/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julian-hecker/prodash.git"
+  },
+  "keywords": [
+    "Productivity",
+    "Dashboard"
+  ],
+  "author": "Julian Hecker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/julian-hecker/prodash/issues"
+  },
+  "scripts": {
+    "start": "node server",
+    "dev": "concurrently \"npm:react-start\" \"nodemon server\"",
+    "react-start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   },
   "eslintConfig": {
     "extends": "react-app"
