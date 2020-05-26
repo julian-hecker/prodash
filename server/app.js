@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(buildDirectory));
 
 // === Routes ===
-app.use('/api', require('../routes/apiRoutes'));
-app.use('/auth', require('../routes/authRoutes'));
+// app.use('/api', require('../routes/apiRoutes'));
+// app.use('/auth', require('../routes/authRoutes'));
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(buildDirectory, 'index.html'));

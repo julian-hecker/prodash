@@ -21,7 +21,7 @@
   "proxy": "http://localhost:3001",
   "scripts": {
     "start": "node server/bin/www",
-    "dev": "concurrently \"nodemon server\" \"npm run start-react\"",
+    "dev": "concurrently \"nodemon server/bin/www\" \"npm run start-react\"",
     "start-react": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
